@@ -33,7 +33,7 @@ class InventoryAllocator:
                         if order[item] == 0:
                             del order[item]
 
-        # if there are no more items in order, then it can be fully allocated
+        # if there are no more items in order, then the whole order can be fully allocated
         if len(order) == 0:
             return [ { key : value } for key,value in allocated_order.items() ]
         else:
